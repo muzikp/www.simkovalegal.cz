@@ -1,0 +1,108 @@
+extends layout.pug
+
+block navbar
+	-var navbarClass = "background-clocks nv-dark";
+	-var logo = "light";
+	include navbar.pug
+		block navbaradd
+			.claim-container
+				h1.claim-text.hf.fw700 !{"Kde ostatní vidí problém,<br>my vidíme řešení."}
+				a.btn.sl(href="/#hodnoty") Naše hodnoty
+block content
+	section#o-nas
+		.content
+			.flex-cont.section-header
+				.box-2.left
+					h1.section-title O nás
+				.box-2.right
+					img.icon(src="/media/icons/symbol-owl.svg")
+			.flex-cont
+				.box-2.block.spaced.text-side-space
+					p Advokátní kancelář ŠIMKOVÁ LEGAL s. r. o. je dlouhodobým a spolehlivým partnerem v oblasti právních služeb s více než patnáctiletou historií na trhu. Poskytujeme služby na vysoké profesionální úrovni ve všech významných oblastech práva se zvláštní specializací na oblast práva obchodního.
+					p Velmi si ceníme dlouhodobých vztahů s našimi klienty. S řadou z nich úspěšně spolupracujeme od doby založení kanceláře. Našimi klienty jsou zejména investoři a podnikatelé, kteří působí v různých oborech, jako jsou informační technologie, development, obnovitelné energie, finanční služby a mnoho dalších.
+					p Naše advokátní kancelář dlouhodobě spolupracuje s transakčními, účetními a daňovými poradci a se soudními znalci. Díky této spolupráci můžeme klientům zajistit všechny úkony spojené se znaleckým oceněním majetku, zpracováním účetních závěrek a zahajovacích rozvah nebo jejich auditů komfortně na jednom místě, s výbornou koordinací všech zúčastněných subjektů. Tento typ spolupráce je uplatnitelný zejména u komplexních a složitých transakcí, jako jsou přeměny obchodních společností, due diligence a M&A transakce, při nichž je nezbytná úzká kooperace mezi pracovními týmy.
+				.box-2.mobile-full-width.mobile-bottomless
+					.block
+						img(src="/media/team/team-01.webp" style="max-width: 100%;" alt="ŠIMKOVÁ LEGAL s.r.o.")
+	section#hodnoty
+		- var hodnoty = [{label: "Zkušenost", text: ["Patnáct let zkušeností s poskytováním právních služeb se zaměřením na obchodní právo, zejména pak na právo korporátní, přeměny obchodních společností, akvizice a restrukturalizace. Po celou dobu naší praxe se specializujeme na řešení komplexních právních transakcí, a to s důrazem na zastupování klientů, kteří oceňují stabilitu a dlouhodobou spolupráci s konkrétním zkušeným právním partnerem."]}, {label: "Partnerství", text: ["Dlouhodobý vztah s klienty a profesionální péče s ohledem na individuální potřeby každého klienta. Naší prioritou je, abychom pro klienty byli důvěryhodným a spolehlivým partnerem, který jim pomůže vyřešit problém rychle a k maximální spokojenosti."]}, {label: "Úspěch", text: ["Máme zkušenosti s kombinacemi různých forem transakcí, umíme specificky nastavit řešení problému kreativním způsobem. Náš tým úspěšně realizoval řadu restrukturalizací, přeměn, řízení komplexních projektů, narovnání složitých sporů, obranu v situacích nepřátelských převzetí i financování projektů za specifických podmínek."]}];
+		.content
+			.flex-cont.section-header
+				.box-2.left
+					h1.section-title Naše hodnoty
+				.box-2.right
+					.icon
+						.small-section-divider
+			.flex-cont
+				- var hodnota_i = 1;
+				each h in hodnoty
+					.box-3.spaced.text-side-space
+						.hodnota
+							.number !{hodnota_i.toString().padStart(2, '0')}
+							h2.title !{h.label}
+							- hodnota_i++;
+							each t in h.text
+								p !{t}
+	section#specializace.bg-light-gray
+		.content
+			.flex-cont.section-header
+				.box-2.left
+					h1.section-title Naše specializace
+				.box-2.right
+					.icon
+						.small-section-divider
+			.flex-cont
+				each s in specializace
+					.specializace
+						.d-flex.flex-column.bg-white.text-side-space
+							span
+								img.icon(src="/media/icons/Group " + s.icon + ".svg")
+							.header
+								h4.title !{s.title}
+							.text
+								each t in s.short
+									p !{t}
+							.more
+								a.btn(href = "/specializace#" + s.id)
+									i.more-icon.bi.bi-arrow-right-circle
+				.specializace(style="background-color: transparent !important;")
+					.d-flex.flex-column(style="height: 100%; justify-content: center;")
+						.more
+							a.btn.sl(href = "/specializace" style="width: 100%;") Zobrazit vše
+	- var maxPeople = 3;
+	section#tym.bg-white
+		.desktop-only
+			.content
+				.flex-cont.section-header
+					.box-2.left
+						h1.section-title Náš tým
+					.box-2.right
+						.icon
+							.small-section-divider
+			#desktopteamcarousel.carousel.slide.flex-cont
+				button.btn(type='button' data-bs-target='#desktopteamcarousel' data-bs-slide='prev')
+					h1 <
+				.carousel-inner
+					- var groups = [team.filter((e,i) => i < 3), team.filter((e,i) => i > 2 && i < 6), team.filter((e,i) => i === 6)];
+					each g in groups
+						.carousel-item(class = groups.indexOf(g) == 0 ? "active" : "")
+							.flex-cont
+								each person in g
+									.box-3
+										.person-preview
+											a(href="/tym/"+person.id)
+												img(src="/media/team/" + person.img, alt=person.label)
+											h6.fw700.name
+												a(href="/tym/"+person.id) !{person.label}
+											p.job
+												a(href="/tym/"+person.id) !{person.position}
+				button.btn(type='button' data-bs-target='#desktopteamcarousel' data-bs-slide='next')
+					h1 >
+			.flex-cont.center
+				.more.all-team(style="padding-bottom: 40px;")
+					a.btn.sl(href="/nas-tym") Celý tým			
+		#mobileteamcarousel.mobile-only
+			-var maxPeople = 3;
+			include team.pug
+	include reference.pug
+	include kariera.pug

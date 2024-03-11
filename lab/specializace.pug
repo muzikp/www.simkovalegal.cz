@@ -1,0 +1,28 @@
+extends layout 
+
+block navbar
+	-var navbarClass = "background-marble nv-dark";
+	-var logo = "light";
+	include navbar.pug
+		block navbaradd
+			.navbar-addon
+				section
+					.content
+						h3.hf.salmon-light.uppercase.bold Naše specializace
+						br
+						h6.white Pro naše klienty jsme připraveni poskytovat komplexní právní servis, který ke své činnosti potřebují. Zaměřujeme se zejména na následující klíčové oblasti:		
+
+block content
+	section
+		.content.bg-light-gray.pct-20
+			.flex-cont
+				each s in specializace
+					.specializace.detail(id=s.id)
+						.d-flex.flex-column
+							span
+								img.icon(src="/media/icons/Group " + s.icon + ".svg")
+							span.header
+								h4.title !{s.title}
+							.text
+								each t in s.full
+									p !{t}

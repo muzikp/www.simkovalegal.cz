@@ -1,0 +1,72 @@
+extends ../layout
+
+block navbar
+  - var navbarClass = "background-white nv-light";
+  - var logo = "dark";
+  include ../navbar.pug
+
+block content
+  - var p = person || {"id":"petra-simkova","label":"Mgr. Petra Šimková","img":"petra-simkova.jpg","position":"advokátka a jednatelka ŠIMKOVÁ LEGAL s.r.o.","bullets":["Korporátní právo","Fúze a akvizice","Financování","Přeměny obchodních společností a družstev"],"text":["V rámci své praxe se Petra specializuje na obchodní právo, zejména pak na korporátní právo a poradenství při přeměnách obchodních společností včetně přeshraničních. Petra má zkušenosti s vedením projektů pro významné české i zahraniční společnosti v oblasti akvizic, uspořádání holdingových skupin či jejich restrukturalizací, dále se věnuje oblasti dluhového financování na straně věřitelů i dlužníků. Mezi její zaměření také patří návrhy uspořádání právních vztahů mezi akcionáři a v neposlední řadě zastupování ve sporech mezi společníky obchodních společností.","Svou právní praxi zahájila v renomované pražské advokátní kanceláři, kde působila celkem pět let, a věnovala se převážně korporátnímu a insolvenčnímu právu včetně vedení agendy správce konkursní podstaty. Po absolvování advokátní zkoušky v roce 2006 pokračovala s poskytováním právních služeb nejdříve jako samostatný advokát a od roku 2008 jako společník advokátní kanceláře ŠIMKOVÁ LEGAL s.r.o."],"phone":"+420 775 946 416","email":"simkova@simkovalegal.cz","dsid":"mu2f8qw","languages":["český","anglický"],"education":["Univerzita Karlova v Praze, Právnická fakulta (2003), titul Mgr."],"membership":["Česká advokátní komora od r. 2007, reg. č. 11487"]};
+  section.bg-light-gray
+    .content
+      .medailon
+        .photo-container
+          img.photo(src="/media/team/" + p.img alt=p.label)
+        .block.text-container
+          h1.title(style="letter-spacing: 0.05rem;") !{p.label}
+          p.job !{p.position}
+          if(p.bullets)
+            ul.bullet-points
+              each b in p.bullets
+                li !{b}
+          if(p.text)
+            .description
+              each t in p.text
+                p !{t}
+          .divider.h-3
+          if(p.phone)
+            a.inherit-style(href="tel:" + p.phone)
+              p
+                b T:&nbsp
+                | !{p.phone}
+          if(p.email)
+            a.inherit-style(href="mailto:" + p.email)
+              p
+                b E:&nbsp
+                | !{p.email}
+          if(p.dsid)
+            p ID datové schránky: !{p.dsid}
+          if(p.languages)
+            .divider
+            p
+              b Jazyky:&nbsp
+              | !{p.languages.join(", ")}
+          if(p.education)
+            .divider
+            if(p.education.length > 1)
+              b Vzdělání
+              ul.bullet-points
+                each e in p.education
+                  li !{e}
+            else
+              p 
+                b Vzdělání:&nbsp
+                | !{p.education[0]}
+          if(p.membership)
+            .divider
+            if(p.membership.length > 1)
+              b Členství
+              ul.bullet-points
+                each m in p.membership
+                  li !{m}
+            else
+              p 
+                b Členství:&nbsp
+                | !{p.membership[0]}
+          .more.me-auto
+            a.btn.sl(href = "/tym" style="margin-top: 2rem;") 
+              i.bi.bi-arrow-left(style="margin-right: 0.5rem;")
+              | Zpět na členy týmu
+          //.thumbnails
+            include team.pug
+  include ../kariera.pug

@@ -1,0 +1,18 @@
+div(class=navbarClass)
+  nav.navbar.navbar-expand-sm.navbar-light
+    .navbar-container
+      a.navbar-brand.ms-auto(href='/')
+        -if(logo == "light")
+          img.logo(src="/media/logo-light.svg" alt="ŠIMKOVÁ LEGAL s.r.o.")
+        -else
+          img.logo(src="/media/logo-dark.svg" alt="ŠIMKOVÁ LEGAL s.r.o.")
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+        span
+          i.bi.bi-list
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0  
+        each s in sections
+          li.nav-item.me-2
+            a.nav-link(href=s.url) !{s.label}
+  .additional
+    block navbaradd

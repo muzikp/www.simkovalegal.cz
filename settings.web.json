@@ -1,0 +1,66 @@
+{
+	"compilers": {
+		"ignore": [
+			"layout.pug",
+			"team.pug",
+			"navbar.pug",
+			"kariera.pug"			
+		],
+		"javascript": {
+			"minified": true,
+			"minifiedOnly": false
+		},
+		"scss": {
+			"minified": true,
+			"minifiedOnly": true
+		},
+		"pug": {
+			"minified": true
+		},
+		"image": {
+			"default": "webp-medium",
+			"rules": [],
+			"styles": {
+				"webp-medium": {
+					"webp": {},
+					"modulate": {
+						"brightness": 1,
+						"saturation": 1,
+						"hue": 1,
+						"lightness": 1
+					}
+				},
+				"webphigh": {
+					"webp": {},
+					"modulate": {
+						"brightness": 1,
+						"saturation": 1,
+						"hue": 1,
+						"lightness": 1
+					}
+				}
+			}
+		}
+	},
+	"seo": {
+		"host": "https://www.simkovalegal.cz",
+		"sitemap": {
+			"auto": true,
+			"frequency": "daily",
+			"extensions": [
+				"html"
+			],
+			"ignore": ["404", "404.html"]
+		},
+		"robots": {
+			"auto": true,
+			"content": [
+				"User-agent: Googlebot",
+				"Disallow: /nogooglebot/",
+				"",
+				"User-agent: *",
+				"Allow: /"
+			]
+		}
+	}
+}

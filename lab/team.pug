@@ -1,0 +1,28 @@
+- var personIndex = 1;
+- var maxPeople = maxPeople || team.length;
+
+section#tym.bg-white
+	.content
+		.flex-cont.section-header
+			.box-2.left
+				h1.section-title Náš tým
+			.box-2.right
+				.icon
+					.small-section-divider
+		.flex-cont.align-start
+				each person in team
+					- if(personIndex <= maxPeople)
+						.box-4
+							.person-preview
+								a(href="/tym/"+person.id)
+									img(src="/media/team/" + person.img, alt=person.label)
+								h6.fw700.name
+									a(href="/tym/"+person.id) !{person.label}
+								p.job
+									a(href="/tym/"+person.id) !{person.position}
+						- personIndex++;
+					- else
+							- break;
+		- if(personIndex < team.length)
+			.more.all-team
+				a.btn.sl(href="/nas-tym") Celý tým

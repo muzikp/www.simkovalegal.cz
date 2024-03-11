@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block navbar
+  - var navbarClass = "background-clocks nv-dark";
+  - var logo = "light";
+  include ../navbar.pug
+    block navbaradd
+      .claim-container
+        h1.claim-text.hf.fw700 !{"Kde ostatní vidí problém,<br>my vidíme řešení."}
+block content
+  include ../team.pug
+  include ../kariera.pug

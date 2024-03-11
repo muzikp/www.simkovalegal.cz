@@ -1,0 +1,31 @@
+section#reference.bg-light-gray
+	.content
+		.flex-cont.section-header
+			.box-2.left
+				h1.section-title Naše reference
+			.box-2.right
+				.icon
+					.small-section-divider
+	.desktop-only
+		#desktopreferencecarousel.carousel.slide.flex-cont
+			button.btn(type='button' data-bs-target='#desktopreferencecarousel' data-bs-slide='prev')
+				h1 <
+			.carousel-inner
+				- var refSize = 5;
+				- var groups = [];
+				- for (var i = 0; i < reference.length; i += refSize) {groups.push(reference.slice(i, i + refSize));}
+				each g in groups
+					.carousel-item(class = groups.indexOf(g) == 0 ? "active" : "")
+						.flex-cont.gallery
+							each ref in g
+								.ref-logo-cont
+									a(href=ref.url target = "_blank")
+										img(src="/media/reference/" + ref.file, alt= ref.label)
+			button.btn(type='button' data-bs-target='#desktopreferencecarousel' data-bs-slide='next')
+				h1 >
+	.mobile-only
+		.flex-cont.gallery
+			each ref in reference
+				.ref-logo-cont
+					a(href=ref.url target = "_blank")
+						img(src="/media/reference/" + ref.file, alt= ref.label)
