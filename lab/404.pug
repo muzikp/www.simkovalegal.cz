@@ -1,4 +1,9 @@
-extends layout.pug 
+extends layout.pug
 
+block navbar
+	-var navbarClass = "background-clocks nv-dark";
+	-var logo = "light";
+	include navbar.pug
 block content
-    h1 !{message404}
+	.claim-container
+		h1.black.claim-text.hf.fw700() !{message404}

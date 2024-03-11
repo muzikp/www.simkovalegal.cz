@@ -4,7 +4,8 @@
 			"layout.pug",
 			"team.pug",
 			"navbar.pug",
-			"kariera.pug"			
+			"kariera.pug",
+			"reference.pug"
 		],
 		"javascript": {
 			"minified": true,

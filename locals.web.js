@@ -285,7 +285,7 @@ module.exports = {
             "url": "https://www.hydropol-cz.com/"
         },
         {
-            "file": "konica.wepb",
+            "file": "konica.webp",
             "label": "Konica Minolta",
             "url": "https://www.konicaminolta.cz/cs-cz"
         },
@@ -372,5 +372,5 @@ module.exports = {
         {id: "kariera", label: "Kariéra", url: "/#kariera"}, 
         {id: "kontakt", label: "Kontakt", url: "/#kontakt"}
     ],
-    message404: "To, co hledáte, tu není."
+    message404: "Stránka nenalezena"
 }

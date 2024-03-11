@@ -39,6 +39,10 @@ img {
     height: auto; /* Ensures that the aspect ratio of the image is maintained */
 }
 
+.black {
+    color: $black !important;
+}
+
 .section {
     width: 100% !important;
 }
