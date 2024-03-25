@@ -358,9 +358,8 @@ module.exports = {
     sections: [
         {id: "o-nas", label: "O nás", url: "/#o-nas"}, 
         {id: "specializace", label: "Specializace", url: "/specializace"}, 
-        {id: "tym", label: "Tým", url: "/tym/"}, 
-        {id: "kariera", label: "Kariéra", url: "/#kariera"}, 
+        {id: "tym", label: "Tým", url: "/tym/"},        
         {id: "kontakt", label: "Kontakt", url: "/#kontakt"}
     ],
     message404: "Stránka nenalezena"
-}
+};
