@@ -1,5 +1,3 @@
-/* global $*/
-
 $(function(){
     $(".career-form").submit(function(){        
         const data = $(this).serializeArray();
@@ -7,17 +5,23 @@ $(function(){
         data.forEach(e => o[e.name] = e.value);
         $.ajax({
             method: 'POST',
-            url: 'https://formsubmit.co/ajax/muzikp@gmail.com',
+            url: 'https://formsubmit.co/ajax/recepce@aksh.cz',
             dataType: 'json',
             accepts: 'application/json',
             data: o,
             success: function(data) {
                 console.log("Vaše zpráva byla úspěšně odeslána.")
-                $(".career-form").find(".callback").empty().append(`<small class="success">Vaše zpráva byla úspěšně odeslána.</small>`);
+                iziToast.success({
+                    title: 'Odesláno',
+                    message: 'Vaše zpráva byla úspěšně odeslána.'
+                });
             },
             error: function(err) {
                 console.error("Vaši zprávu se nepodařilo odeslat. Zprávu můžete poslat na recepce@simkovalegal.cz.")
-                $(".career-form").find(".callback").empty().append(`<small class="error">Vaši zprávu se nepodařilo odeslat. Zprávu můžete poslat na recepce@simkovalegal.cz.</small>`)
+                iziToast.error({
+                    title: 'Odeslání se nezdařilo',
+                    message: 'Vaši zprávu se nepodařilo odeslat. Zprávu můžete poslat na recepce@simkovalegal.cz.'
+                });
             }
         });
         return false;

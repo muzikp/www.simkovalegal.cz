@@ -47,7 +47,7 @@ module.exports = {
                 "V advokacii začal Filip působit již během studia a prošel několika advokátními kancelářemi či kanceláří insolvenčního správce. S advokátní kanceláří ŠIMKOVÁ LEGAL začal jako trvale spolupracující advokát spolupracovat v roce 2022."
             ],
             "phone": "+420 721 039 774",
-            "email": "filip@simkovalegal.webp",
+            "email": "fuksa@simkovalegal.webp",
             "dsid": "8f6muhg",
             "languages": [
                 "český",
@@ -76,7 +76,7 @@ module.exports = {
                 "Šárka absolvovala koncipientskou praxi v advokátní kanceláři ŠIMKOVÁ LEGAL a od července 2018 je trvale spolupracující advokátkou."
             ],
             "phone": "+420 722 543 797",
-            "email": "sarka@simkovalegal.cz",
+            "email": "duskova@simkovalegal.cz",
             "dsid": "vkuceqd",
             "languages": [
                 "český",
@@ -107,7 +107,7 @@ module.exports = {
                 "Během svého studia pracoval jako právní asistent v jedné z předních česko-německých advokátních kanceláří a po absolvování Právnické fakulty Univerzity Karlovy v Praze působil na pozici poradce ministryně financí a následně jako vedoucí jejího kabinetu. V advokátní kanceláři ŠIMKOVÁ LEGAL působí od roku 2018 nejprve v rámci koncipientské praxe a od roku 2021 jako spolupracující advokát."
             ],
             "phone": "+420 602 331 150",
-            "email": "jan@simkovalegal.cz",
+            "email": "svehla@simkovalegal.cz",
             "dsid": "428sg7x",
             "languages": [
                 "český",
@@ -136,7 +136,7 @@ module.exports = {
                 "Po dobu dvou let získával Daniel v advokátní kanceláři ŠIMKOVÁ LEGAL praxi na pozici právního asistenta a od roku 2020 v kanceláři působí jako advokátní koncipient."
             ],
             "phone": "+420 732 152 375",
-            "email": "daniel@simkovalegal.cz",
+            "email": "neustadt@simkovalegal.cz",
             "dsid": null,
             "languages": [
                 "český",
@@ -163,7 +163,7 @@ module.exports = {
                 "Jakub působí na pozici právního asistenta v advokátní kanceláři ŠIMKOVÁ LEGAL od roku 2022. V letošním roce plánuje ukončení studia na Právnické fakultě Univerzity Karlovy v Praze a rovněž studia na fakultě financí a účetnictví Vysoké školy ekonomické v Praze, kde v roce 2022 dokončil bakalářské studium."
             ],
             "phone": "+420 775 855 272",
-            "email": "jakub@simkovalegal.cz",
+            "email": "tegel@simkovalegal.cz",
             "dsid": null,
             "languages": [
                 "český",
@@ -333,16 +333,6 @@ module.exports = {
             "file": "zoot.webp",
             "label": "ZOOT",
             "url": "https://www.zoot.cz/"
-        },
-        {
-            "file": "auditone.webp",
-            "label": "AUDIT ONE s.r.o.",
-            "url": "https://auditone.cz/"
-        },
-        {
-            "file": "taxone.webp",
-            "label": "TAX ONE s.r.o.",
-            "url": "https://taxone.cz/"
         },
         {
             "file": "rezolv.webp",

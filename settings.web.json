@@ -1,10 +1,11 @@
 {
+	"dev": true,
 	"compilers": {
 		"ignore": [
 			"layout.pug",
 			"team.pug",
 			"navbar.pug",
-			"kariera.pug",
+			"kontakt.pug",
 			"reference.pug",
 			"footer.pug"
 		],
@@ -63,6 +64,14 @@
 				"User-agent: *",
 				"Allow: /"
 			]
-		}
+		},
+		"google": {
+			"gtm": {
+				"token": "GTM-W5M5RW54"
+			},
+			"ga": {
+				"token": "G-6XY6NPGGXL"
+			}
+		}		
 	}
 }

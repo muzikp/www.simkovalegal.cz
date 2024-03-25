@@ -31,6 +31,21 @@ h1, h2, h3, h4, h5, h6, .nav-link {
   font-weight: 600;
 }
 
+label.required {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+label.required:before {
+  content: "*";
+  color: darkred;
+  font-size: 1.1rem;
+  font-weight: 600;
+  top: 0;
+  margin-left: 0.2rem;
+}
+
 h6 {
   font-size: 1.2rem;
 }
@@ -157,6 +172,14 @@ p, b, i, .small, li {
   padding: 15px;
 }
 
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
 .flex-left {
   justify-content: start;
 }
@@ -203,6 +226,23 @@ footer .col.footer-section.full {
   padding-left: 10%;
   padding-right: 10%;
   display: flex;
+}
+footer .other {
+  display: flex;
+  list-style: none;
+}
+footer .other .text {
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent !important;
+  border: none !important;
+  text-decoration: none;
+}
+footer .other li:not(:first-child) {
+  margin-left: 1rem;
 }
 
 section .content {
@@ -543,10 +583,48 @@ button:focus {
   align-items: center;
 }
 
-#kariera .callback .success {
+#kontakt label:after {
+  background-color: transparent !important;
+  color: #5B5A5F;
+}
+#kontakt form {
+  width: 60%;
+}
+#kontakt form .form-floating {
+  padding: 10px;
+}
+#kontakt form .w-50 {
+  width: 50%;
+}
+#kontakt form .w-100 {
+  width: 100%;
+}
+#kontakt form .form-check-input:checked {
+  background-color: #C5A07D;
+  border-color: #C5A07D;
+}
+#kontakt form textarea {
+  min-height: 15rem;
+}
+#kontakt .contact-line {
+  display: flex;
+  text-decoration: none;
+}
+#kontakt .contact-line .icon {
+  margin-right: 1rem;
+  color: #C5A07D;
+  font-size: 1.2rem;
+}
+#kontakt .contact-line .text {
+  font-size: 1.2rem;
+}
+#kontakt .form-text {
+  width: 40%;
+}
+#kontakt .callback .success {
   color: green;
 }
-#kariera .callback .error {
+#kontakt .callback .error {
   color: red;
 }
 
@@ -557,6 +635,8 @@ button:focus {
 .appendix.middle {
   width: 50%;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .appendix.right {
@@ -752,6 +832,16 @@ button:focus {
     padding: 0% 10px;
     display: flex;
   }
+  footer .other {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  footer .other li, footer .other li:not(:first-child) {
+    text-align: center;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
   .all-team {
     padding: 1.5rem 1rem !important;
   }
@@ -810,8 +900,20 @@ button:focus {
   .spaced {
     padding: 1rem;
   }
-  #kariera .box-2.right {
+  #kontakt .contact-line {
+    justify-content: center;
+  }
+  #kontakt .box-2.right {
     display: none;
+  }
+  #kontakt .form-text {
+    width: 100%;
+  }
+  #kontakt .career-form {
+    width: 100%;
+  }
+  #kontakt .career-form .w-50 {
+    width: 100% !important;
   }
   .career-claim {
     font-size: 1.5rem;
