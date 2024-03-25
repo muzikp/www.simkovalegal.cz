@@ -47,7 +47,7 @@ module.exports = {
                 "V advokacii začal Filip působit již během studia a prošel několika advokátními kancelářemi či kanceláří insolvenčního správce. S advokátní kanceláří ŠIMKOVÁ LEGAL začal jako trvale spolupracující advokát spolupracovat v roce 2022."
             ],
             "phone": "+420 721 039 774",
-            "email": "fuksa@simkovalegal.webp",
+            "email": "fuksa@simkovalegal.cz",
             "dsid": "8f6muhg",
             "languages": [
                 "český",
