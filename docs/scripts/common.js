@@ -1,29 +1,30 @@
 $(function(){
-    $(".career-form").submit(function(){        
-        const data = $(this).serializeArray();
-        var o = {};
-        data.forEach(e => o[e.name] = e.value);
+    $(".career-form").submit(function(event) {                
+        $(".career-form").find(`[type="submit"]`).attr("disabled", true);
+        event.preventDefault();
+        const formData = JSON.stringify($(this).serializeArray());
+        const url = "https://api.evalytics.org/v1/ses?app=brkraT0j8yXtDcTR";    
         $.ajax({
             method: 'POST',
-            url: 'https://formsubmit.co/ajax/recepce@aksh.cz',
+            url: url,
             dataType: 'json',
-            accepts: 'application/json',
-            data: o,
-            success: function(data) {
-                console.log("Vaše zpráva byla úspěšně odeslána.")
+            contentType: 'application/json',
+            crossDomain: true,
+            data: formData,
+            success: function(response) {                
                 iziToast.success({
                     title: 'Odesláno',
                     message: 'Vaše zpráva byla úspěšně odeslána.'
                 });
-            },
-            error: function(err) {
-                console.error("Vaši zprávu se nepodařilo odeslat. Zprávu můžete poslat na recepce@simkovalegal.cz.")
+                //$(".career-form").find(`[type="submit"]`).attr("disabled", false);
+            },            
+            error: function(xhr, status, error) {                
                 iziToast.error({
                     title: 'Odeslání se nezdařilo',
                     message: 'Vaši zprávu se nepodařilo odeslat. Zprávu můžete poslat na recepce@simkovalegal.cz.'
                 });
+                //$(".career-form").find(`[type="submit"]`).attr("disabled", false);
             }
         });
-        return false;
     });
 })
