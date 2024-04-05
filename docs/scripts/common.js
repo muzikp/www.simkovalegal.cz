@@ -1,6 +1,6 @@
 $(function(){
-    $(".career-form").submit(function(event) {                
-        $(".career-form").find(`[type="submit"]`).attr("disabled", true);
+    $(".contact-form").submit(function(event) {                
+        $(".contact-form").find(`[type="submit"]`).attr("disabled", true);
         event.preventDefault();
         const formData = JSON.stringify($(this).serializeArray());
         const url = "https://api.evalytics.org/v1/ses?app=brkraT0j8yXtDcTR";    
@@ -16,14 +16,14 @@ $(function(){
                     title: 'Odesláno',
                     message: 'Vaše zpráva byla úspěšně odeslána.'
                 });
-                //$(".career-form").find(`[type="submit"]`).attr("disabled", false);
+                //$(".contact-form").find(`[type="submit"]`).attr("disabled", false);
             },            
             error: function(xhr, status, error) {                
                 iziToast.error({
                     title: 'Odeslání se nezdařilo',
                     message: 'Vaši zprávu se nepodařilo odeslat. Zprávu můžete poslat na recepce@simkovalegal.cz.'
                 });
-                //$(".career-form").find(`[type="submit"]`).attr("disabled", false);
+                //$(".contact-form").find(`[type="submit"]`).attr("disabled", false);
             }
         });
     });

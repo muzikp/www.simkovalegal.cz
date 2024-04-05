@@ -101,7 +101,6 @@ p, b, i, .small, li {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
   color: #5B5A5F;
   font-size: 0.85rem;
   /*
@@ -148,6 +147,12 @@ p, b, i, .small, li {
   justify-content: center;
 }
 
+.box-1 {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+}
+
 .box-2 {
   display: flex;
   width: 50%;
@@ -170,6 +175,27 @@ p, b, i, .small, li {
   display: flex;
   width: 66.666666%;
   padding: 15px;
+}
+
+.mandatory h2, .mandatory h3, .mandatory h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #5B5A5F;
+}
+.mandatory h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.mandatory h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.mandatory h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.mandatory .box-1 {
+  text-align: left;
 }
 
 .flex {
@@ -269,7 +295,7 @@ section .title {
   background-position: center;
 }
 
-.career-background {
+.contact-background {
   background-image: url("/media/background/symbol-pattern.webp") !important;
   background-size: cover;
   background-position: center;
@@ -313,7 +339,7 @@ section .title {
   padding: 1% 10% !important;
 }
 
-.career-form {
+.contact-form {
   background-color: #ffffff;
   padding: 2rem;
   width: 100%;
@@ -575,7 +601,7 @@ button:focus {
   width: 100px; /* Adjust the width as needed */
 }
 
-.career-claim {
+.contact-claim {
   font-size: 2rem;
   text-align: left;
   display: flex;
@@ -591,7 +617,7 @@ button:focus {
   width: 60%;
 }
 #kontakt form .form-floating {
-  padding: 10px;
+  padding: 5px 10px 0px 0px;
 }
 #kontakt form .w-50 {
   width: 50%;
@@ -604,7 +630,7 @@ button:focus {
   border-color: #C5A07D;
 }
 #kontakt form textarea {
-  min-height: 15rem;
+  min-height: 5rem;
 }
 #kontakt .contact-line {
   display: flex;
@@ -713,7 +739,7 @@ button:focus {
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
-  .box-2, .box-3, .box-4 {
+  .box-1, .box-2, .box-3, .box-4 {
     margin: 0rem;
     display: block;
     width: 100%;
@@ -909,13 +935,13 @@ button:focus {
   #kontakt .form-text {
     width: 100%;
   }
-  #kontakt .career-form {
+  #kontakt .contact-form {
     width: 100%;
   }
-  #kontakt .career-form .w-50 {
+  #kontakt .contact-form .w-50 {
     width: 100% !important;
   }
-  .career-claim {
+  .contact-claim {
     font-size: 1.5rem;
     padding: 1rem 2rem;
     display: flex;
@@ -923,7 +949,7 @@ button:focus {
     align-items: center;
     text-align: center;
   }
-  .career-form {
+  .contact-form {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 0px;
   }

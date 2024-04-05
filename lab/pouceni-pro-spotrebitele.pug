@@ -1,0 +1,18 @@
+extends layout
+
+block navbar
+	-var navbarClass = "background-clocks nv-dark";
+	-var logo = "light";
+	include navbar.pug		
+
+block content
+	section#o-nas
+		.content
+			.flex-cont.section-header
+				.box-1.left
+					h1.section-title Poučení pro spotřebitele				
+			.flex-cont.mandatory
+				.box-1.block.spaced.text-side-space
+					p Podle zákona č. 634/1992 Sb., o ochraně spotřebitele, v platném znění, má spotřebitel právo na mimosoudní řešení spotřebitelského sporu vyplývajícího ze smlouvy o poskytování právních služeb. Pověřeným subjektem pro mimosoudní řešení spotřebitelských sporů mezi advokátem a spotřebitelem ze smluv o poskytování právních služeb je Česká advokátní komora, webové stránky: 
+						a(href="https://www.cak.cz" target="_blank") www.cak.cz
+						| .	

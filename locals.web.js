@@ -209,7 +209,7 @@ module.exports = {
             "full": [
                 "V oblasti korporátního práva nabízíme našim klientům, kterými jsou často větší koncerny, širokou škálu právních služeb, počínaje vhodným nastavením zakladatelských dokumentů, případně uspořádání holdingové struktury, po řešení různých záležitostí, jejichž potřeba vyvstane v čase. V oblasti korporátního práva se také zabýváme restrukturalizacemi korporátních struktur, vytvářením společných podniků a nastavením vztahů mezi společníky prostřednictvím akcionářských dohod.",
                 "Dlouhodobě poskytujeme právní služby v oblasti fúzí a akvizic. Máme zkušenost i s investicemi do startupů. Poskytujeme plnou právní podporu od konzultací vhodné formy transakce, přes právní due dilligence, až po zajištění příslušné smluvní dokumentace. Zastupujeme klienty také v řízeních ohledně spojování soutěžitelů před Úřadem pro ochranu hospodářské soutěže.",
-                "Přeměny obchodních společností a družstev",
+                "Přeměny obchodních společností a družstev.",
                 "Máme rozsáhlé zkušenosti se všemi zákonem upravenými typy přeměn, jako jsou fúze, včetně přeshraničních, rozdělení, rozdělení odštěpením, převod jmění na společníka nebo změny právní formy. Naši právníci vám pomohou s každým krokem této komplexní právní problematiky."
             ]
         },
