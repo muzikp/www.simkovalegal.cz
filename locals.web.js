@@ -349,11 +349,13 @@ module.exports = {
             "label": "Argia s.r.o.",
             "url": "https://argia.cz/cs/"
         },
+        /*
         {
             "file": "corfin.webp",
             "label": "CORFIN Capital Partners, SE",
             "url": "http://www.corfincp.com/"
         }
+        */
     ],
     sections: [
         {id: "o-nas", label: "O nás", url: "/#o-nas"}, 
