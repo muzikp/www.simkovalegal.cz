@@ -1,5 +1,5 @@
 {
-	"dev": true,
+	"dev": false,
 	"compilers": {
 		"ignore": [
 			"layout.pug",
@@ -58,11 +58,8 @@
 		"robots": {
 			"auto": true,
 			"content": [
-				"User-agent: Googlebot",
-				"Disallow: /nogooglebot/",
-				"",
 				"User-agent: *",
-				"Allow: /"
+				"Disallow:"
 			]
 		},
 		"google": {

@@ -124,7 +124,7 @@ module.exports = {
             "id": "daniel-neustadt",
             "label": "Mgr. Daniel Neustadt",
             "img": "daniel-neustadt.webp",
-            "position": "advokátní koncipient",
+            "position": "advokát",
             "bullets": [
                 "Korporátní právo",
                 "Nemovitostní právo",
@@ -133,8 +133,8 @@ module.exports = {
             ],
             "text": [
                 "Daniel se věnuje obchodnímu i občanskému právu, zejména smluvní agendě, oblasti přeměn obchodních společností, jakož i obchodním závazkovým vztahům. Rovněž realizoval několik úspěšných nemovitostních projektů zahrnujících refinancování bankovních úvěrů, prodeje bytových jednotek i podílů v bytových družstvech, agendu spojenou se vznikem společenství vlastníků jednotek i změnami prohlášení vlastníka nemovitosti.",
-                "Po dobu dvou let získával Daniel v advokátní kanceláři ŠIMKOVÁ LEGAL praxi na pozici právního asistenta a od roku 2020 v kanceláři působí jako advokátní koncipient."
-            ],
+                "Po dobu dvou let získával Daniel v advokátní kanceláři ŠIMKOVÁ LEGAL praxi na pozici právního asistenta, od roku 2020 absolvoval koncipientskou praxi a od roku 2024 je trvale spolupracující advokát."
+            ],            
             "phone": "+420 732 152 375",
             "email": "neustadt@simkovalegal.cz",
             "dsid": null,
@@ -145,7 +145,9 @@ module.exports = {
             "education": [
                 "Západočeská univerzita v Plzni, Právnická fakulta (2020), titul Mgr."
             ],
-            "membership": null
+            "membership": [
+                "Česká advokátní komora od r. 2024, reg. č. 21337"
+            ]
         },
         {
             "id": "jakub-tegel",
