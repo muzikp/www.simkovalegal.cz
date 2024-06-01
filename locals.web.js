@@ -202,7 +202,7 @@ module.exports = {
     ],
     specializace: [
         {
-            "icon": "372",
+            "icon": "372",            
             "id": "korporatni-pravo",
             "title": "Korporátní právo, fúze a akvizice",
             "short": [
