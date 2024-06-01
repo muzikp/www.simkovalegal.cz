@@ -59,7 +59,8 @@
 			"auto": true,
 			"content": [
 				"User-agent: *",
-				"Disallow:"
+				"Disallow:",
+				"Sitemap: https://www.simkovalegal.cz/sitemap.xml"
 			]
 		},
 		"google": {
