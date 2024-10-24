@@ -284,7 +284,7 @@ module.exports = {
         {
             "file": "hydropol.webp",
             "label": "Hydropol ČR",
-            "url": "https://www.hydropol-cz.com/"
+            "url": "https://www.hydropol.cz/"
         },
         {
             "file": "konica.webp",
